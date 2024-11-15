@@ -1,0 +1,2259 @@
+<!DOCTYPE html>
+<html lang="zh">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>测试报告</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .centered-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 90px;
+            padding: 0 48px 20px;
+        }
+        .header-text{
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 49px;
+            padding: 0 8px 2px;
+            text-align: center;
+            border: 2px solid #ddd;
+            background-color: #33ccff;
+           }
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+        th {
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 49px;
+            padding: 0 8px 2px;
+            text-align: center;
+            border: 2px solid #ddd;
+            background-color: #6cac57;
+        }
+        td {
+            padding: 12px;
+            border: 2px solid #ddd;
+            text-align: center;
+            min-width: 120px; /* 最小宽度 */
+            max-width: 400px; /* 最大宽度 */
+            overflow-wrap: break-word; /* 更好地进行换行处理 */
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:nth-child(odd) {
+            background-color: #f0f0f0;
+        }
+        tr:hover {
+            background-color: #ffffe0; /* 悬停时的浅黄色 */
+        }
+        .highlight {
+            background-color: #90ee90; /* 绿色背景 */
+        }
+        @media (max-width: 600px) {
+            th, td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>  
+<body>  
+
+<h2 class="centered-text">自动化测试报告</h2>
+</br>
+</br>  
+    <table>  
+    <thead>  
+        <tr>  
+            <th>序号</th><th>测试步骤描述</th><th>关键字名称</th><th>定位方式</th><th>定位表达式</th><th>操作值</th><th>执行时间</th><th>执行结果</th><th>异常信息</th><th>截图路径</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        <tr><td>1</td><td>打开chrome浏览器</td><td>open_browser</td><td></td><td></td><td>chrome</td><td>22时50分24秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>2</td><td>访问126邮箱首页</td><td>get</td><td></td><td></td><td>https://mail.126.com</td><td>22时50分29秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>3</td><td>切入到iframe中</td><td>switch_to_iframe</td><td>xpath</td><td>//div[@id="loginDiv"]/iframe</td><td></td><td>22时50分35秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>4</td><td>输入用户名testman1980</td><td>input</td><td>xpath</td><td>//input[@name="email"]</td><td>testman1980</td><td>22时50分35秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>5</td><td>输入密码wulaoshi1978</td><td>input</td><td>xpath</td><td>//input[@name="password"]</td><td>wulaoshi1978</td><td>22时50分35秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>6</td><td>点击登录按钮</td><td>click</td><td>id</td><td>dologin</td><td></td><td>22时50分35秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>7</td><td>等待4秒</td><td>sleep</td><td></td><td></td><td>10</td><td>22时50分35秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>8</td><td>断言通讯录是否出现在源码中</td><td>assert_word</td><td></td><td></td><td>通讯录</td><td>22时50分45秒</td><td>成功</td><td></td><td></td></tr>
+  
+    </tbody>  
+    </table>   
+    <br><br>  
+    
+  
+    <table>  
+    <thead>  
+        <tr>  
+            <th>序号</th><th>测试用例名称</th><th>用例描述</th><th>用例步骤sheet名称</th><th>数据sheet名称</th><th>是否执行</th><th>测试执行时间</th><th>测试执行结果</th><th>异常信息</th><th>截图路径</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        <tr><td>1</td><td>登录</td><td>使用正常用户名密码登录</td><td>登录2</td><td></td><td>y</td><td>22时50分24秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>2</td><td>登录2</td><td>使用正常用户名密码登录</td><td>登录</td><td></td><td>n</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>3</td><td>发邮件</td><td>发送一封包含附件的邮件</td><td>发送邮件</td><td></td><td>n</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>4</td><td>混合驱动发送邮件</td><td>使用不同的数据发送邮件</td><td>发送邮件</td><td>测试数据</td><td>y</td><td></td><td></td><td></td><td></td></tr>
+  
+    </tbody>  
+    </table>   
+    <br><br>  
+    
+  
+    <table>  
+    <thead>  
+        <tr>  
+            <th>序号</th><th>测试步骤描述</th><th>关键字名称</th><th>定位方式</th><th>定位表达式</th><th>操作值</th><th>执行时间</th><th>执行结果</th><th>异常信息</th><th>截图路径</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        <tr><td>1</td><td>打开chrome浏览器</td><td>open_browser</td><td></td><td></td><td>chrome</td><td>22时50分24秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>2</td><td>访问126邮箱首页</td><td>get</td><td></td><td></td><td>https://mail.126.com</td><td>22时50分29秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>3</td><td>切入到iframe中</td><td>switch_to_iframe</td><td>xpath</td><td>//div[@id="loginDiv"]/iframe</td><td></td><td>22时50分35秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>4</td><td>输入用户名testman1980</td><td>input</td><td>xpath</td><td>//input[@name="email"]</td><td>testman1980</td><td>22时50分35秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>5</td><td>输入密码wulaoshi1978</td><td>input</td><td>xpath</td><td>//input[@name="password"]</td><td>wulaoshi1978</td><td>22时50分35秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>6</td><td>点击登录按钮</td><td>click</td><td>id</td><td>dologin</td><td></td><td>22时50分35秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>7</td><td>等待4秒</td><td>sleep</td><td></td><td></td><td>10</td><td>22时50分35秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>8</td><td>断言通讯录是否出现在源码中</td><td>assert_word</td><td></td><td></td><td>通讯录</td><td>22时50分45秒</td><td>失败</td><td>执行command: assert_word('通讯录') 命令的时候，出现异常，异常信息：断言异常：断言词通讯录 没有在源码中被发现！ 
+ Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\main.py", line 111, in execute_command_keyword_by_sheet_name
+    eval(command)
+  File "<string>", line 1, in <module>
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 111, in assert_word
+    raise e
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 108, in assert_word
+    assert word in driver.page_source,"断言异常：断言词%s 没有在源码中被发现！" %word
+AssertionError: 断言异常：断言词通讯录 没有在源码中被发现！
+</td><td></td></tr>
+  
+    </tbody>  
+    </table>   
+    <br><br>  
+    
+  
+    <table>  
+    <thead>  
+        <tr>  
+            <th>序号</th><th>测试用例名称</th><th>用例描述</th><th>用例步骤sheet名称</th><th>数据sheet名称</th><th>是否执行</th><th>测试执行时间</th><th>测试执行结果</th><th>异常信息</th><th>截图路径</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        <tr><td>1</td><td>登录</td><td>使用正常用户名密码登录</td><td>登录2</td><td></td><td>y</td><td>22时50分24秒</td><td>失败</td><td>执行command: assert_word('通讯录') 命令的时候，出现异常，异常信息：断言异常：断言词通讯录 没有在源码中被发现！ 
+ Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\main.py", line 111, in execute_command_keyword_by_sheet_name
+    eval(command)
+  File "<string>", line 1, in <module>
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 111, in assert_word
+    raise e
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 108, in assert_word
+    assert word in driver.page_source,"断言异常：断言词%s 没有在源码中被发现！" %word
+AssertionError: 断言异常：断言词通讯录 没有在源码中被发现！
+</td><td></td></tr>
+<tr><td>2</td><td>登录2</td><td>使用正常用户名密码登录</td><td>登录</td><td></td><td>n</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>3</td><td>发邮件</td><td>发送一封包含附件的邮件</td><td>发送邮件</td><td></td><td>n</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>4</td><td>混合驱动发送邮件</td><td>使用不同的数据发送邮件</td><td>发送邮件</td><td>测试数据</td><td>y</td><td></td><td></td><td></td><td></td></tr>
+  
+    </tbody>  
+    </table>   
+    <br><br>  
+    
+  
+    <table>  
+    <thead>  
+        <tr>  
+            <th>序号</th><th>测试步骤描述</th><th>关键字名称</th><th>定位方式</th><th>定位表达式</th><th>操作值</th><th>执行时间</th><th>执行结果</th><th>异常信息</th><th>截图路径</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        <tr><td>1</td><td>打开chrome浏览器</td><td>open_browser</td><td></td><td></td><td>chrome</td><td>22时50分24秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>2</td><td>访问126邮箱首页</td><td>get</td><td></td><td></td><td>https://mail.126.com</td><td>22时50分29秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>3</td><td>切入到iframe中</td><td>switch_to_iframe</td><td>xpath</td><td>//div[@id="loginDiv"]/iframe</td><td></td><td>22时50分35秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>4</td><td>输入用户名testman1980</td><td>input</td><td>xpath</td><td>//input[@name="email"]</td><td>testman1980</td><td>22时50分35秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>5</td><td>输入密码wulaoshi1978</td><td>input</td><td>xpath</td><td>//input[@name="password"]</td><td>wulaoshi1978</td><td>22时50分35秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>6</td><td>点击登录按钮</td><td>click</td><td>id</td><td>dologin</td><td></td><td>22时50分36秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>7</td><td>等待4秒</td><td>sleep</td><td></td><td></td><td>10</td><td>22时50分36秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>8</td><td>断言通讯录是否出现在源码中</td><td>assert_word</td><td></td><td></td><td>通讯录</td><td>22时50分46秒</td><td>成功</td><td></td><td></td></tr>
+  
+    </tbody>  
+    </table>   
+    <br><br>  
+    
+  
+    <table>  
+    <thead>  
+        <tr>  
+            <th>序号</th><th>测试用例名称</th><th>用例描述</th><th>用例步骤sheet名称</th><th>数据sheet名称</th><th>是否执行</th><th>测试执行时间</th><th>测试执行结果</th><th>异常信息</th><th>截图路径</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        <tr><td>1</td><td>登录</td><td>使用正常用户名密码登录</td><td>登录2</td><td></td><td>y</td><td>22时50分24秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>2</td><td>登录2</td><td>使用正常用户名密码登录</td><td>登录</td><td></td><td>n</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>3</td><td>发邮件</td><td>发送一封包含附件的邮件</td><td>发送邮件</td><td></td><td>n</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>4</td><td>混合驱动发送邮件</td><td>使用不同的数据发送邮件</td><td>发送邮件</td><td>测试数据</td><td>y</td><td></td><td></td><td></td><td></td></tr>
+  
+    </tbody>  
+    </table>   
+    <br><br>  
+    
+  
+    <table>  
+    <thead>  
+        <tr>  
+            <th>序号</th><th>测试步骤描述</th><th>关键字名称</th><th>定位方式</th><th>定位表达式</th><th>操作值</th><th>执行时间</th><th>执行结果</th><th>异常信息</th><th>截图路径</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        <tr><td>1</td><td>打开chrome浏览器</td><td>open_browser</td><td></td><td></td><td>chrome</td><td>22时50分45秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>2</td><td>访问126邮箱首页</td><td>get</td><td></td><td></td><td>https://mail.126.com</td><td>22时50分49秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>3</td><td>切入到iframe中</td><td>switch_to_iframe</td><td>126mail_index</td><td>login_iframe </td><td></td><td>22时50分55秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>4</td><td>输入用户名testman1980</td><td>input</td><td>126mail_index</td><td>user_name</td><td>${用户名}</td><td>22时50分55秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>5</td><td>输入密码wulaoshi1978</td><td>input</td><td>126mail_index</td><td>pass_word</td><td>${密码}</td><td>22时50分55秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>6</td><td>点击登录按钮</td><td>click</td><td>126mail_index</td><td>submit_button</td><td></td><td>22时50分55秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>7</td><td>等待4秒</td><td>sleep</td><td></td><td></td><td>10</td><td>22时50分55秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>8</td><td>断言通讯录是否出现在源码中</td><td>assert_word</td><td></td><td></td><td>通讯录</td><td>22时51分5秒</td><td>成功</td><td></td><td></td></tr>
+  
+    </tbody>  
+    </table>   
+    <br><br>  
+    
+  
+    <table>  
+    <thead>  
+        <tr>  
+            <th>序号</th><th>测试步骤描述</th><th>关键字名称</th><th>定位方式</th><th>定位表达式</th><th>操作值</th><th>执行时间</th><th>执行结果</th><th>异常信息</th><th>截图路径</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        <tr><td>1</td><td>打开chrome浏览器</td><td>open_browser</td><td></td><td></td><td>chrome</td><td>22时50分46秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>2</td><td>访问126邮箱首页</td><td>get</td><td></td><td></td><td>https://mail.126.com</td><td>22时50分49秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>3</td><td>切入到iframe中</td><td>switch_to_iframe</td><td>126mail_index</td><td>login_iframe </td><td></td><td>22时50分55秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>4</td><td>输入用户名testman1980</td><td>input</td><td>126mail_index</td><td>user_name</td><td>${用户名}</td><td>22时50分55秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>5</td><td>输入密码wulaoshi1978</td><td>input</td><td>126mail_index</td><td>pass_word</td><td>${密码}</td><td>22时50分56秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>6</td><td>点击登录按钮</td><td>click</td><td>126mail_index</td><td>submit_button</td><td></td><td>22时50分56秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>7</td><td>等待4秒</td><td>sleep</td><td></td><td></td><td>10</td><td>22时50分56秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>8</td><td>断言通讯录是否出现在源码中</td><td>assert_word</td><td></td><td></td><td>通讯录</td><td>22时51分6秒</td><td>成功</td><td></td><td></td></tr>
+  
+    </tbody>  
+    </table>   
+    <br><br>  
+    
+  
+    <table>  
+    <thead>  
+        <tr>  
+            <th>序号</th><th>测试步骤描述</th><th>关键字名称</th><th>定位方式</th><th>定位表达式</th><th>操作值</th><th>执行时间</th><th>执行结果</th><th>异常信息</th><th>截图路径</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        <tr><td>1</td><td>打开chrome浏览器</td><td>open_browser</td><td></td><td></td><td>chrome</td><td>22时50分46秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>2</td><td>访问126邮箱首页</td><td>get</td><td></td><td></td><td>https://mail.126.com</td><td>22时50分49秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>3</td><td>切入到iframe中</td><td>switch_to_iframe</td><td>126mail_index</td><td>login_iframe </td><td></td><td>22时50分55秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>4</td><td>输入用户名testman1980</td><td>input</td><td>126mail_index</td><td>user_name</td><td>${用户名}</td><td>22时50分55秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>5</td><td>输入密码wulaoshi1978</td><td>input</td><td>126mail_index</td><td>pass_word</td><td>${密码}</td><td>22时50分56秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>6</td><td>点击登录按钮</td><td>click</td><td>126mail_index</td><td>submit_button</td><td></td><td>22时50分56秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>7</td><td>等待4秒</td><td>sleep</td><td></td><td></td><td>10</td><td>22时50分56秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>8</td><td>断言通讯录是否出现在源码中</td><td>assert_word</td><td></td><td></td><td>通讯录</td><td>22时51分6秒</td><td>失败</td><td>执行command: assert_word('通讯录') 命令的时候，出现异常，异常信息：断言异常：断言词通讯录 没有在源码中被发现！ 
+ Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\main.py", line 111, in execute_command_keyword_by_sheet_name
+    eval(command)
+  File "<string>", line 1, in <module>
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 111, in assert_word
+    raise e
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 108, in assert_word
+    assert word in driver.page_source,"断言异常：断言词%s 没有在源码中被发现！" %word
+AssertionError: 断言异常：断言词通讯录 没有在源码中被发现！
+</td><td></td></tr>
+  
+    </tbody>  
+    </table>   
+    <br><br>  
+    
+  
+    <table>  
+    <thead>  
+        <tr>  
+            <th>序号</th><th>测试步骤描述</th><th>关键字名称</th><th>定位方式</th><th>定位表达式</th><th>操作值</th><th>执行时间</th><th>执行结果</th><th>异常信息</th><th>截图路径</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        <tr><td>1</td><td>使用正确的用户名和密码登录邮箱</td><td>key_word</td><td></td><td></td><td>登录1</td><td>22时50分45秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>2</td><td>点击“写信”链接</td><td>click</td><td>126mail_home</td><td>write_letter_link</td><td></td><td>22时51分6秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>3</td><td>输入收件人地址</td><td>input</td><td>126mail_write</td><td>receipt</td><td>${收件人}</td><td>22时51分6秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>4</td><td>输入邮件正文</td><td>input</td><td>126mail_write</td><td>subject</td><td>${邮件主题}</td><td>22时51分7秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>5</td><td>上传附件</td><td>input</td><td>126mail_write</td><td>send_file</td><td>${附件名称}</td><td>22时51分7秒</td><td>失败</td><td>执行command: input('xpath','//input[@type="file"]','e:\\a.py') 命令的时候，出现异常，异常信息：定位方式:xpath 定位表达式：//input[@type="file"] 的元素在输入内容 e:\a.py 时候出现异常，异常信息：Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 59, in input
+    element.send_keys(content)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webelement.py", line 479, in send_keys
+    'value': keys_to_typing(value)})
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidArgumentException: Message: invalid argument: File not found : e:\a.py
+  (Session info: chrome=128.0.6613.114)
+
+ 
+ Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 59, in input
+    element.send_keys(content)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webelement.py", line 479, in send_keys
+    'value': keys_to_typing(value)})
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidArgumentException: Message: invalid argument: File not found : e:\a.py
+  (Session info: chrome=128.0.6613.114)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\main.py", line 449, in execute_test_case_by_hybrid
+    eval(command)
+  File "<string>", line 1, in <module>
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 66, in input
+    raise Exception("定位方式:%s 定位表达式：%s 的元素在输入内容 %s 时候出现异常，异常信息：%s" %(locate_method, locate_exp,content,exception_info))
+Exception: 定位方式:xpath 定位表达式：//input[@type="file"] 的元素在输入内容 e:\a.py 时候出现异常，异常信息：Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 59, in input
+    element.send_keys(content)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webelement.py", line 479, in send_keys
+    'value': keys_to_typing(value)})
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidArgumentException: Message: invalid argument: File not found : e:\a.py
+  (Session info: chrome=128.0.6613.114)
+
+
+</td><td></td></tr>
+<tr><td>6</td><td>等待3秒上传附件完成</td><td>sleep</td><td></td><td></td><td>3</td><td>22时51分7秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>7</td><td>切换到正文的iframe</td><td>switch_to_iframe</td><td>126mail_write</td><td>iframe</td><td></td><td>22时51分10秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>8</td><td>输入邮件的正文</td><td>input</td><td>126mail_write</td><td>content</td><td>${邮件正文}</td><td>22时51分10秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>9</td><td>切出到iframe</td><td>switch_out_iframe</td><td></td><td></td><td></td><td>22时51分11秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>10</td><td>点击发送按钮</td><td>click</td><td>126mail_write</td><td>send_button</td><td></td><td>22时51分11秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>11</td><td>等待3秒邮件发送成功</td><td>sleep</td><td></td><td></td><td>3</td><td>22时51分11秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>12</td><td>断言邮件是否发送成功</td><td>assert_word</td><td></td><td></td><td>${断言词}</td><td>22时51分14秒</td><td>失败</td><td>执行command: assert_word('邮件发送成功111') 命令的时候，出现异常，异常信息：断言异常：断言词邮件发送成功111 没有在源码中被发现！ 
+ Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\main.py", line 449, in execute_test_case_by_hybrid
+    eval(command)
+  File "<string>", line 1, in <module>
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 111, in assert_word
+    raise e
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 108, in assert_word
+    assert word in driver.page_source,"断言异常：断言词%s 没有在源码中被发现！" %word
+AssertionError: 断言异常：断言词邮件发送成功111 没有在源码中被发现！
+</td><td></td></tr>
+<tr><td>13</td><td>关闭浏览器</td><td>quit</td><td></td><td></td><td></td><td>22时51分14秒</td><td>成功</td><td></td><td></td></tr>
+  
+    </tbody>  
+    </table>   
+    <br><br>  
+    
+  
+    <table>  
+    <thead>  
+        <tr>  
+            <th>序号</th><th>用户名</th><th>密码</th><th>收件人</th><th>邮件主题</th><th>附件名称</th><th>邮件正文</th><th>断言词</th><th>是否执行</th><th>执行时间</th><th>执行结果</th><th>异常信息</th><th>截图信息</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        <tr><td>1</td><td>testman1980</td><td>wulaoshi1978</td><td>testman1980@126.com</td><td>今天天气阴天，可能要下雨</td><td>e:\\a.py</td><td>记得带伞！</td><td>邮件发送成功111</td><td>y</td><td>22时50分45秒</td><td>失败</td><td>执行command: assert_word('邮件发送成功111') 命令的时候，出现异常，异常信息：断言异常：断言词邮件发送成功111 没有在源码中被发现！ 
+ Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\main.py", line 449, in execute_test_case_by_hybrid
+    eval(command)
+  File "<string>", line 1, in <module>
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 111, in assert_word
+    raise e
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 108, in assert_word
+    assert word in driver.page_source,"断言异常：断言词%s 没有在源码中被发现！" %word
+AssertionError: 断言异常：断言词邮件发送成功111 没有在源码中被发现！
+</td><td></td></tr>
+  
+    </tbody>  
+    </table>   
+    <br><br>  
+    
+  
+    <table>  
+    <thead>  
+        <tr>  
+            <th>序号</th><th>测试步骤描述</th><th>关键字名称</th><th>定位方式</th><th>定位表达式</th><th>操作值</th><th>执行时间</th><th>执行结果</th><th>异常信息</th><th>截图路径</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        <tr><td>1</td><td>使用正确的用户名和密码登录邮箱</td><td>key_word</td><td></td><td></td><td>登录1</td><td>22时50分46秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>2</td><td>点击“写信”链接</td><td>click</td><td>126mail_home</td><td>write_letter_link</td><td></td><td>22时51分6秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>3</td><td>输入收件人地址</td><td>input</td><td>126mail_write</td><td>receipt</td><td>${收件人}</td><td>22时51分7秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>4</td><td>输入邮件正文</td><td>input</td><td>126mail_write</td><td>subject</td><td>${邮件主题}</td><td>22时51分7秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>5</td><td>上传附件</td><td>input</td><td>126mail_write</td><td>send_file</td><td>${附件名称}</td><td>22时51分8秒</td><td>失败</td><td>执行command: input('xpath','//input[@type="file"]','e:\\a.py') 命令的时候，出现异常，异常信息：定位方式:xpath 定位表达式：//input[@type="file"] 的元素在输入内容 e:\a.py 时候出现异常，异常信息：Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 59, in input
+    element.send_keys(content)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webelement.py", line 479, in send_keys
+    'value': keys_to_typing(value)})
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidArgumentException: Message: invalid argument: File not found : e:\a.py
+  (Session info: chrome=128.0.6613.114)
+
+ 
+ Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 59, in input
+    element.send_keys(content)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webelement.py", line 479, in send_keys
+    'value': keys_to_typing(value)})
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidArgumentException: Message: invalid argument: File not found : e:\a.py
+  (Session info: chrome=128.0.6613.114)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\main.py", line 449, in execute_test_case_by_hybrid
+    eval(command)
+  File "<string>", line 1, in <module>
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 66, in input
+    raise Exception("定位方式:%s 定位表达式：%s 的元素在输入内容 %s 时候出现异常，异常信息：%s" %(locate_method, locate_exp,content,exception_info))
+Exception: 定位方式:xpath 定位表达式：//input[@type="file"] 的元素在输入内容 e:\a.py 时候出现异常，异常信息：Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 59, in input
+    element.send_keys(content)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webelement.py", line 479, in send_keys
+    'value': keys_to_typing(value)})
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidArgumentException: Message: invalid argument: File not found : e:\a.py
+  (Session info: chrome=128.0.6613.114)
+
+
+</td><td></td></tr>
+<tr><td>6</td><td>等待3秒上传附件完成</td><td>sleep</td><td></td><td></td><td>3</td><td>22时51分8秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>7</td><td>切换到正文的iframe</td><td>switch_to_iframe</td><td>126mail_write</td><td>iframe</td><td></td><td>22时51分11秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>8</td><td>输入邮件的正文</td><td>input</td><td>126mail_write</td><td>content</td><td>${邮件正文}</td><td>22时51分11秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>9</td><td>切出到iframe</td><td>switch_out_iframe</td><td></td><td></td><td></td><td>22时51分11秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>10</td><td>点击发送按钮</td><td>click</td><td>126mail_write</td><td>send_button</td><td></td><td>22时51分11秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>11</td><td>等待3秒邮件发送成功</td><td>sleep</td><td></td><td></td><td>3</td><td>22时51分11秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>12</td><td>断言邮件是否发送成功</td><td>assert_word</td><td></td><td></td><td>${断言词}</td><td>22时51分14秒</td><td>失败</td><td>执行command: assert_word('邮件发送成功111') 命令的时候，出现异常，异常信息：断言异常：断言词邮件发送成功111 没有在源码中被发现！ 
+ Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\main.py", line 449, in execute_test_case_by_hybrid
+    eval(command)
+  File "<string>", line 1, in <module>
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 111, in assert_word
+    raise e
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 108, in assert_word
+    assert word in driver.page_source,"断言异常：断言词%s 没有在源码中被发现！" %word
+AssertionError: 断言异常：断言词邮件发送成功111 没有在源码中被发现！
+</td><td></td></tr>
+<tr><td>13</td><td>关闭浏览器</td><td>quit</td><td></td><td></td><td></td><td>22时51分14秒</td><td>成功</td><td></td><td></td></tr>
+  
+    </tbody>  
+    </table>   
+    <br><br>  
+    
+  
+    <table>  
+    <thead>  
+        <tr>  
+            <th>序号</th><th>用户名</th><th>密码</th><th>收件人</th><th>邮件主题</th><th>附件名称</th><th>邮件正文</th><th>断言词</th><th>是否执行</th><th>执行时间</th><th>执行结果</th><th>异常信息</th><th>截图信息</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        <tr><td>1</td><td>testman1980</td><td>wulaoshi1978</td><td>testman1980@126.com</td><td>今天天气阴天，可能要下雨</td><td>e:\\a.py</td><td>记得带伞！</td><td>邮件发送成功111</td><td>y</td><td>22时50分46秒</td><td>失败</td><td>执行command: assert_word('邮件发送成功111') 命令的时候，出现异常，异常信息：断言异常：断言词邮件发送成功111 没有在源码中被发现！ 
+ Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\main.py", line 449, in execute_test_case_by_hybrid
+    eval(command)
+  File "<string>", line 1, in <module>
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 111, in assert_word
+    raise e
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 108, in assert_word
+    assert word in driver.page_source,"断言异常：断言词%s 没有在源码中被发现！" %word
+AssertionError: 断言异常：断言词邮件发送成功111 没有在源码中被发现！
+</td><td></td></tr>
+  
+    </tbody>  
+    </table>   
+    <br><br>  
+    
+  
+    <table>  
+    <thead>  
+        <tr>  
+            <th>序号</th><th>测试步骤描述</th><th>关键字名称</th><th>定位方式</th><th>定位表达式</th><th>操作值</th><th>执行时间</th><th>执行结果</th><th>异常信息</th><th>截图路径</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        <tr><td>1</td><td>打开chrome浏览器</td><td>open_browser</td><td></td><td></td><td>chrome</td><td>22时51分19秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>2</td><td>访问126邮箱首页</td><td>get</td><td></td><td></td><td>https://mail.126.com</td><td>22时51分22秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>3</td><td>切入到iframe中</td><td>switch_to_iframe</td><td>126mail_index</td><td>login_iframe </td><td></td><td>22时51分22秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>4</td><td>输入用户名testman1980</td><td>input</td><td>126mail_index</td><td>user_name</td><td>${用户名}</td><td>22时51分25秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>5</td><td>输入密码wulaoshi1978</td><td>input</td><td>126mail_index</td><td>pass_word</td><td>${密码}</td><td>22时51分25秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>6</td><td>点击登录按钮</td><td>click</td><td>126mail_index</td><td>submit_button</td><td></td><td>22时51分25秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>7</td><td>等待4秒</td><td>sleep</td><td></td><td></td><td>10</td><td>22时51分25秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>8</td><td>断言通讯录是否出现在源码中</td><td>assert_word</td><td></td><td></td><td>通讯录</td><td>22时51分35秒</td><td>成功</td><td></td><td></td></tr>
+  
+    </tbody>  
+    </table>   
+    <br><br>  
+    
+  
+    <table>  
+    <thead>  
+        <tr>  
+            <th>序号</th><th>测试步骤描述</th><th>关键字名称</th><th>定位方式</th><th>定位表达式</th><th>操作值</th><th>执行时间</th><th>执行结果</th><th>异常信息</th><th>截图路径</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        <tr><td>1</td><td>打开chrome浏览器</td><td>open_browser</td><td></td><td></td><td>chrome</td><td>22时51分19秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>2</td><td>访问126邮箱首页</td><td>get</td><td></td><td></td><td>https://mail.126.com</td><td>22时51分22秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>3</td><td>切入到iframe中</td><td>switch_to_iframe</td><td>126mail_index</td><td>login_iframe </td><td></td><td>22时51分25秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>4</td><td>输入用户名testman1980</td><td>input</td><td>126mail_index</td><td>user_name</td><td>${用户名}</td><td>22时51分25秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>5</td><td>输入密码wulaoshi1978</td><td>input</td><td>126mail_index</td><td>pass_word</td><td>${密码}</td><td>22时51分26秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>6</td><td>点击登录按钮</td><td>click</td><td>126mail_index</td><td>submit_button</td><td></td><td>22时51分26秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>7</td><td>等待4秒</td><td>sleep</td><td></td><td></td><td>10</td><td>22时51分26秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>8</td><td>断言通讯录是否出现在源码中</td><td>assert_word</td><td></td><td></td><td>通讯录</td><td>22时51分36秒</td><td>成功</td><td></td><td></td></tr>
+  
+    </tbody>  
+    </table>   
+    <br><br>  
+    
+  
+    <table>  
+    <thead>  
+        <tr>  
+            <th>序号</th><th>测试步骤描述</th><th>关键字名称</th><th>定位方式</th><th>定位表达式</th><th>操作值</th><th>执行时间</th><th>执行结果</th><th>异常信息</th><th>截图路径</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        <tr><td>1</td><td>使用正确的用户名和密码登录邮箱</td><td>key_word</td><td></td><td></td><td>登录1</td><td>22时51分19秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>2</td><td>点击“写信”链接</td><td>click</td><td>126mail_home</td><td>write_letter_link</td><td></td><td>22时51分36秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>3</td><td>输入收件人地址</td><td>input</td><td>126mail_write</td><td>receipt</td><td>${收件人}</td><td>22时51分36秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>4</td><td>输入邮件正文</td><td>input</td><td>126mail_write</td><td>subject</td><td>${邮件主题}</td><td>22时51分36秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>5</td><td>上传附件</td><td>input</td><td>126mail_write</td><td>send_file</td><td>${附件名称}</td><td>22时51分36秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>6</td><td>等待3秒上传附件完成</td><td>sleep</td><td></td><td></td><td>3</td><td>22时51分36秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>7</td><td>切换到正文的iframe</td><td>switch_to_iframe</td><td>126mail_write</td><td>iframe</td><td></td><td>22时51分39秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>8</td><td>输入邮件的正文</td><td>input</td><td>126mail_write</td><td>content</td><td>${邮件正文}</td><td>22时51分40秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>9</td><td>切出到iframe</td><td>switch_out_iframe</td><td></td><td></td><td></td><td>22时51分40秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>10</td><td>点击发送按钮</td><td>click</td><td>126mail_write</td><td>send_button</td><td></td><td>22时51分40秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>11</td><td>等待3秒邮件发送成功</td><td>sleep</td><td></td><td></td><td>3</td><td>22时51分40秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>12</td><td>断言邮件是否发送成功</td><td>assert_word</td><td></td><td></td><td>${断言词}</td><td>22时51分43秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>13</td><td>关闭浏览器</td><td>quit</td><td></td><td></td><td></td><td>22时51分43秒</td><td>成功</td><td></td><td></td></tr>
+  
+    </tbody>  
+    </table>   
+    <br><br>  
+    
+  
+    <table>  
+    <thead>  
+        <tr>  
+            <th>序号</th><th>用户名</th><th>密码</th><th>收件人</th><th>邮件主题</th><th>附件名称</th><th>邮件正文</th><th>断言词</th><th>是否执行</th><th>执行时间</th><th>执行结果</th><th>异常信息</th><th>截图信息</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        <tr><td>2</td><td>testABC1001</td><td>test@ABC</td><td>875821166@qq.com</td><td>下午没有课！</td><td>e:\\a.txt</td><td>出去玩！</td><td>发送成功</td><td>y</td><td>22时51分19秒</td><td>成功</td><td></td><td></td></tr>
+  
+    </tbody>  
+    </table>   
+    <br><br>  
+    
+  
+    <table>  
+    <thead>  
+        <tr>  
+            <th>序号</th><th>测试用例名称</th><th>用例描述</th><th>用例步骤sheet名称</th><th>数据sheet名称</th><th>是否执行</th><th>测试执行时间</th><th>测试执行结果</th><th>异常信息</th><th>截图路径</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        <tr><td>1</td><td>登录</td><td>使用正常用户名密码登录</td><td>登录2</td><td></td><td>y</td><td>22时50分24秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>2</td><td>登录2</td><td>使用正常用户名密码登录</td><td>登录</td><td></td><td>n</td><td>22时50分45秒</td><td></td><td></td><td></td></tr>
+<tr><td>3</td><td>发邮件</td><td>发送一封包含附件的邮件</td><td>发送邮件</td><td></td><td>n</td><td>22时50分45秒</td><td></td><td></td><td></td></tr>
+<tr><td>4</td><td>混合驱动发送邮件</td><td>使用不同的数据发送邮件</td><td>发送邮件</td><td>测试数据</td><td>y</td><td>22时50分45秒</td><td>失败</td><td>执行command: assert_word('邮件发送成功111') 命令的时候，出现异常，异常信息：断言异常：断言词邮件发送成功111 没有在源码中被发现！ 
+ Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\main.py", line 449, in execute_test_case_by_hybrid
+    eval(command)
+  File "<string>", line 1, in <module>
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 111, in assert_word
+    raise e
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 108, in assert_word
+    assert word in driver.page_source,"断言异常：断言词%s 没有在源码中被发现！" %word
+AssertionError: 断言异常：断言词邮件发送成功111 没有在源码中被发现！
+</td><td></td></tr>
+  
+    </tbody>  
+    </table>   
+    <br><br>  
+      
+        <table>  
+        <thead>  
+            <tr >  
+                <td class="header-text">用例总数:2 </br>成功用例总数：1</br>失败用例总数：1</br></d>
+            </tr>  
+        </thead>  
+          
+        </table>   
+        <br><br>  
+        
+
+  
+    <table>  
+    <thead>  
+        <tr>  
+            <th>序号</th><th>测试步骤描述</th><th>关键字名称</th><th>定位方式</th><th>定位表达式</th><th>操作值</th><th>执行时间</th><th>执行结果</th><th>异常信息</th><th>截图路径</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        <tr><td>1</td><td>使用正确的用户名和密码登录邮箱</td><td>key_word</td><td></td><td></td><td>登录1</td><td>22时51分19秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>2</td><td>点击“写信”链接</td><td>click</td><td>126mail_home</td><td>write_letter_link</td><td></td><td>22时51分36秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>3</td><td>输入收件人地址</td><td>input</td><td>126mail_write</td><td>receipt</td><td>${收件人}</td><td>22时51分36秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>4</td><td>输入邮件正文</td><td>input</td><td>126mail_write</td><td>subject</td><td>${邮件主题}</td><td>22时51分36秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>5</td><td>上传附件</td><td>input</td><td>126mail_write</td><td>send_file</td><td>${附件名称}</td><td>22时51分36秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>6</td><td>等待3秒上传附件完成</td><td>sleep</td><td></td><td></td><td>3</td><td>22时51分37秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>7</td><td>切换到正文的iframe</td><td>switch_to_iframe</td><td>126mail_write</td><td>iframe</td><td></td><td>22时51分40秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>8</td><td>输入邮件的正文</td><td>input</td><td>126mail_write</td><td>content</td><td>${邮件正文}</td><td>22时51分40秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>9</td><td>切出到iframe</td><td>switch_out_iframe</td><td></td><td></td><td></td><td>22时51分40秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>10</td><td>点击发送按钮</td><td>click</td><td>126mail_write</td><td>send_button</td><td></td><td>22时51分40秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>11</td><td>等待3秒邮件发送成功</td><td>sleep</td><td></td><td></td><td>3</td><td>22时51分40秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>12</td><td>断言邮件是否发送成功</td><td>assert_word</td><td></td><td></td><td>${断言词}</td><td>22时51分43秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>13</td><td>关闭浏览器</td><td>quit</td><td></td><td></td><td></td><td>22时51分43秒</td><td>成功</td><td></td><td></td></tr>
+  
+    </tbody>  
+    </table>   
+    <br><br>  
+    
+  
+    <table>  
+    <thead>  
+        <tr>  
+            <th>序号</th><th>用户名</th><th>密码</th><th>收件人</th><th>邮件主题</th><th>附件名称</th><th>邮件正文</th><th>断言词</th><th>是否执行</th><th>执行时间</th><th>执行结果</th><th>异常信息</th><th>截图信息</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        <tr><td>2</td><td>testABC1001</td><td>test@ABC</td><td>875821166@qq.com</td><td>下午没有课！</td><td>e:\\a.txt</td><td>出去玩！</td><td>发送成功</td><td>y</td><td>22时51分19秒</td><td>成功</td><td></td><td></td></tr>
+  
+    </tbody>  
+    </table>   
+    <br><br>  
+    
+  
+    <table>  
+    <thead>  
+        <tr>  
+            <th>序号</th><th>测试用例名称</th><th>用例描述</th><th>用例步骤sheet名称</th><th>数据sheet名称</th><th>是否执行</th><th>测试执行时间</th><th>测试执行结果</th><th>异常信息</th><th>截图路径</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        <tr><td>1</td><td>登录</td><td>使用正常用户名密码登录</td><td>登录2</td><td></td><td>y</td><td>22时50分24秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>2</td><td>登录2</td><td>使用正常用户名密码登录</td><td>登录</td><td></td><td>n</td><td>22时50分46秒</td><td></td><td></td><td></td></tr>
+<tr><td>3</td><td>发邮件</td><td>发送一封包含附件的邮件</td><td>发送邮件</td><td></td><td>n</td><td>22时50分46秒</td><td></td><td></td><td></td></tr>
+<tr><td>4</td><td>混合驱动发送邮件</td><td>使用不同的数据发送邮件</td><td>发送邮件</td><td>测试数据</td><td>y</td><td>22时50分46秒</td><td>失败</td><td>执行command: assert_word('邮件发送成功111') 命令的时候，出现异常，异常信息：断言异常：断言词邮件发送成功111 没有在源码中被发现！ 
+ Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\main.py", line 449, in execute_test_case_by_hybrid
+    eval(command)
+  File "<string>", line 1, in <module>
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 111, in assert_word
+    raise e
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 108, in assert_word
+    assert word in driver.page_source,"断言异常：断言词%s 没有在源码中被发现！" %word
+AssertionError: 断言异常：断言词邮件发送成功111 没有在源码中被发现！
+</td><td></td></tr>
+  
+    </tbody>  
+    </table>   
+    <br><br>  
+      
+        <table>  
+        <thead>  
+            <tr >  
+                <td class="header-text">用例总数:2 </br>成功用例总数：1</br>失败用例总数：1</br></d>
+            </tr>  
+        </thead>  
+          
+        </table>   
+        <br><br>  
+        
+
+  
+    <table>  
+    <thead>  
+        <tr>  
+            <th>序号</th><th>测试步骤描述</th><th>关键字名称</th><th>定位方式</th><th>定位表达式</th><th>操作值</th><th>执行时间</th><th>执行结果</th><th>异常信息</th><th>截图路径</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        <tr><td>1</td><td>使用正确的用户名和密码登录邮箱</td><td>key_word</td><td></td><td></td><td>登录1</td><td>22时50分46秒</td><td>失败</td><td></td><td></td></tr>
+<tr><td>2</td><td>点击“写信”链接</td><td>click</td><td>126mail_home</td><td>write_letter_link</td><td></td><td>22时51分6秒</td><td>失败</td><td>执行command: click('xpath','//span[.= "写 信"]') 命令的时候，出现异常，异常信息：定位方式:xpath 定位表达式：//span[.= "写 信"]  没有定位到页面元素 
+ Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 8, in get_element
+    element = driver.find_element_by_xpath(locate_exp)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//span[.= "写 信"]"}
+  (Session info: chrome=128.0.6613.114)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 71, in click
+    element = get_element(driver, locate_method, locate_exp)
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 27, in get_element
+    raise NoSuchElementException("定位方法：%s  定位表达式:%s 无法定位到元素" % (locate_method, locate_exp))
+selenium.common.exceptions.NoSuchElementException: Message: 定位方法：xpath  定位表达式://span[.= "写 信"] 无法定位到元素
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\main.py", line 449, in execute_test_case_by_hybrid
+    eval(command)
+  File "<string>", line 1, in <module>
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 75, in click
+    raise Exception("定位方式:%s 定位表达式：%s  没有定位到页面元素" %(locate_method, locate_exp))
+Exception: 定位方式:xpath 定位表达式：//span[.= "写 信"]  没有定位到页面元素
+</td><td></td></tr>
+<tr><td>3</td><td>输入收件人地址</td><td>input</td><td>126mail_write</td><td>receipt</td><td>${收件人}</td><td>22时51分12秒</td><td>失败</td><td>执行command: input('xpath','//input[@tabindex="1" and @aria-label="收件人地址输入框，请输入邮件地址，多人时地址请以分号隔开"]','testman1980@126.com') 命令的时候，出现异常，异常信息：定位方式:xpath 定位表达式：//input[@tabindex="1" and @aria-label="收件人地址输入框，请输入邮件地址，多人时地址请以分号隔开"] 没有定位到页面元素 
+ Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 8, in get_element
+    element = driver.find_element_by_xpath(locate_exp)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@tabindex="1" and @aria-label="收件人地址输入框，请输入邮件地址，多人时地址请以分号隔开"]"}
+  (Session info: chrome=128.0.6613.114)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 58, in input
+    element = get_element(driver,locate_method, locate_exp)
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 27, in get_element
+    raise NoSuchElementException("定位方法：%s  定位表达式:%s 无法定位到元素" % (locate_method, locate_exp))
+selenium.common.exceptions.NoSuchElementException: Message: 定位方法：xpath  定位表达式://input[@tabindex="1" and @aria-label="收件人地址输入框，请输入邮件地址，多人时地址请以分号隔开"] 无法定位到元素
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\main.py", line 449, in execute_test_case_by_hybrid
+    eval(command)
+  File "<string>", line 1, in <module>
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 62, in input
+    raise Exception("定位方式:%s 定位表达式：%s 没有定位到页面元素" % (locate_method, locate_exp))
+Exception: 定位方式:xpath 定位表达式：//input[@tabindex="1" and @aria-label="收件人地址输入框，请输入邮件地址，多人时地址请以分号隔开"] 没有定位到页面元素
+</td><td></td></tr>
+<tr><td>4</td><td>输入邮件正文</td><td>input</td><td>126mail_write</td><td>subject</td><td>${邮件主题}</td><td>22时51分18秒</td><td>失败</td><td>执行command: input('xpath','//input[contains(@id,"_subjectInput")]','今天天气阴天，可能要下雨') 命令的时候，出现异常，异常信息：定位方式:xpath 定位表达式：//input[contains(@id,"_subjectInput")] 没有定位到页面元素 
+ Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 8, in get_element
+    element = driver.find_element_by_xpath(locate_exp)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//input[contains(@id,"_subjectInput")]"}
+  (Session info: chrome=128.0.6613.114)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 58, in input
+    element = get_element(driver,locate_method, locate_exp)
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 27, in get_element
+    raise NoSuchElementException("定位方法：%s  定位表达式:%s 无法定位到元素" % (locate_method, locate_exp))
+selenium.common.exceptions.NoSuchElementException: Message: 定位方法：xpath  定位表达式://input[contains(@id,"_subjectInput")] 无法定位到元素
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\main.py", line 449, in execute_test_case_by_hybrid
+    eval(command)
+  File "<string>", line 1, in <module>
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 62, in input
+    raise Exception("定位方式:%s 定位表达式：%s 没有定位到页面元素" % (locate_method, locate_exp))
+Exception: 定位方式:xpath 定位表达式：//input[contains(@id,"_subjectInput")] 没有定位到页面元素
+</td><td></td></tr>
+<tr><td>5</td><td>上传附件</td><td>input</td><td>126mail_write</td><td>send_file</td><td>${附件名称}</td><td>22时51分24秒</td><td>失败</td><td>执行command: input('xpath','//input[@type="file"]','e:\\a.py') 命令的时候，出现异常，异常信息：定位方式:xpath 定位表达式：//input[@type="file"] 没有定位到页面元素 
+ Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 8, in get_element
+    element = driver.find_element_by_xpath(locate_exp)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@type="file"]"}
+  (Session info: chrome=128.0.6613.114)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 58, in input
+    element = get_element(driver,locate_method, locate_exp)
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 27, in get_element
+    raise NoSuchElementException("定位方法：%s  定位表达式:%s 无法定位到元素" % (locate_method, locate_exp))
+selenium.common.exceptions.NoSuchElementException: Message: 定位方法：xpath  定位表达式://input[@type="file"] 无法定位到元素
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\main.py", line 449, in execute_test_case_by_hybrid
+    eval(command)
+  File "<string>", line 1, in <module>
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 62, in input
+    raise Exception("定位方式:%s 定位表达式：%s 没有定位到页面元素" % (locate_method, locate_exp))
+Exception: 定位方式:xpath 定位表达式：//input[@type="file"] 没有定位到页面元素
+</td><td></td></tr>
+<tr><td>6</td><td>等待3秒上传附件完成</td><td>sleep</td><td></td><td></td><td>3</td><td>22时51分31秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>7</td><td>切换到正文的iframe</td><td>switch_to_iframe</td><td>126mail_write</td><td>iframe</td><td></td><td>22时51分34秒</td><td>失败</td><td>执行command: switch_to_iframe('xpath','//iframe[@tabindex="1"]') 命令的时候，出现异常，异常信息：定位方式:xpath 定位表达式：//iframe[@tabindex="1"] 没有定位到页面元素 
+ Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 8, in get_element
+    element = driver.find_element_by_xpath(locate_exp)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//iframe[@tabindex="1"]"}
+  (Session info: chrome=128.0.6613.114)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 38, in switch_to_iframe
+    element = get_element(driver,locate_method,locate_exp)
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 27, in get_element
+    raise NoSuchElementException("定位方法：%s  定位表达式:%s 无法定位到元素" % (locate_method, locate_exp))
+selenium.common.exceptions.NoSuchElementException: Message: 定位方法：xpath  定位表达式://iframe[@tabindex="1"] 无法定位到元素
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\main.py", line 449, in execute_test_case_by_hybrid
+    eval(command)
+  File "<string>", line 1, in <module>
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 42, in switch_to_iframe
+    raise Exception("定位方式:%s 定位表达式：%s 没有定位到页面元素" %(locate_method,locate_exp))
+Exception: 定位方式:xpath 定位表达式：//iframe[@tabindex="1"] 没有定位到页面元素
+</td><td></td></tr>
+<tr><td>8</td><td>输入邮件的正文</td><td>input</td><td>126mail_write</td><td>content</td><td>${邮件正文}</td><td>22时51分40秒</td><td>失败</td><td>执行command: input('xpath','//p','记得带伞！') 命令的时候，出现异常，异常信息：定位方式:xpath 定位表达式：//p 的元素在输入内容 记得带伞！ 时候出现异常，异常信息：Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 59, in input
+    element.send_keys(content)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webelement.py", line 479, in send_keys
+    'value': keys_to_typing(value)})
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=128.0.6613.114)
+
+ 
+ Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 59, in input
+    element.send_keys(content)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webelement.py", line 479, in send_keys
+    'value': keys_to_typing(value)})
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=128.0.6613.114)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\main.py", line 449, in execute_test_case_by_hybrid
+    eval(command)
+  File "<string>", line 1, in <module>
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 66, in input
+    raise Exception("定位方式:%s 定位表达式：%s 的元素在输入内容 %s 时候出现异常，异常信息：%s" %(locate_method, locate_exp,content,exception_info))
+Exception: 定位方式:xpath 定位表达式：//p 的元素在输入内容 记得带伞！ 时候出现异常，异常信息：Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 59, in input
+    element.send_keys(content)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webelement.py", line 479, in send_keys
+    'value': keys_to_typing(value)})
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=128.0.6613.114)
+
+
+</td><td></td></tr>
+<tr><td>9</td><td>切出到iframe</td><td>switch_out_iframe</td><td></td><td></td><td></td><td>22时51分46秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>10</td><td>点击发送按钮</td><td>click</td><td>126mail_write</td><td>send_button</td><td></td><td>22时51分46秒</td><td>失败</td><td>执行command: click('xpath','//span[text()="发送"]') 命令的时候，出现异常，异常信息：定位方式:xpath 定位表达式：//span[text()="发送"]  没有定位到页面元素 
+ Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 8, in get_element
+    element = driver.find_element_by_xpath(locate_exp)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()="发送"]"}
+  (Session info: chrome=128.0.6613.114)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 71, in click
+    element = get_element(driver, locate_method, locate_exp)
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 27, in get_element
+    raise NoSuchElementException("定位方法：%s  定位表达式:%s 无法定位到元素" % (locate_method, locate_exp))
+selenium.common.exceptions.NoSuchElementException: Message: 定位方法：xpath  定位表达式://span[text()="发送"] 无法定位到元素
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\main.py", line 449, in execute_test_case_by_hybrid
+    eval(command)
+  File "<string>", line 1, in <module>
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 75, in click
+    raise Exception("定位方式:%s 定位表达式：%s  没有定位到页面元素" %(locate_method, locate_exp))
+Exception: 定位方式:xpath 定位表达式：//span[text()="发送"]  没有定位到页面元素
+</td><td></td></tr>
+<tr><td>11</td><td>等待3秒邮件发送成功</td><td>sleep</td><td></td><td></td><td>3</td><td>22时51分52秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>12</td><td>断言邮件是否发送成功</td><td>assert_word</td><td></td><td></td><td>${断言词}</td><td>22时51分55秒</td><td>失败</td><td>执行command: assert_word('邮件发送成功111') 命令的时候，出现异常，异常信息：断言异常：断言词邮件发送成功111 没有在源码中被发现！ 
+ Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\main.py", line 449, in execute_test_case_by_hybrid
+    eval(command)
+  File "<string>", line 1, in <module>
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 111, in assert_word
+    raise e
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 108, in assert_word
+    assert word in driver.page_source,"断言异常：断言词%s 没有在源码中被发现！" %word
+AssertionError: 断言异常：断言词邮件发送成功111 没有在源码中被发现！
+</td><td></td></tr>
+<tr><td>13</td><td>关闭浏览器</td><td>quit</td><td></td><td></td><td></td><td>22时51分55秒</td><td>成功</td><td></td><td></td></tr>
+  
+    </tbody>  
+    </table>   
+    <br><br>  
+    
+  
+    <table>  
+    <thead>  
+        <tr>  
+            <th>序号</th><th>用户名</th><th>密码</th><th>收件人</th><th>邮件主题</th><th>附件名称</th><th>邮件正文</th><th>断言词</th><th>是否执行</th><th>执行时间</th><th>执行结果</th><th>异常信息</th><th>截图信息</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        <tr><td>1</td><td>testman1980</td><td>wulaoshi1978</td><td>testman1980@126.com</td><td>今天天气阴天，可能要下雨</td><td>e:\\a.py</td><td>记得带伞！</td><td>邮件发送成功111</td><td>y</td><td>22时50分46秒</td><td>失败</td><td>执行command: assert_word('邮件发送成功111') 命令的时候，出现异常，异常信息：断言异常：断言词邮件发送成功111 没有在源码中被发现！ 
+ Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\main.py", line 449, in execute_test_case_by_hybrid
+    eval(command)
+  File "<string>", line 1, in <module>
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 111, in assert_word
+    raise e
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 108, in assert_word
+    assert word in driver.page_source,"断言异常：断言词%s 没有在源码中被发现！" %word
+AssertionError: 断言异常：断言词邮件发送成功111 没有在源码中被发现！
+</td><td></td></tr>
+  
+    </tbody>  
+    </table>   
+    <br><br>  
+    
+  
+    <table>  
+    <thead>  
+        <tr>  
+            <th>序号</th><th>测试步骤描述</th><th>关键字名称</th><th>定位方式</th><th>定位表达式</th><th>操作值</th><th>执行时间</th><th>执行结果</th><th>异常信息</th><th>截图路径</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        <tr><td>1</td><td>打开chrome浏览器</td><td>open_browser</td><td></td><td></td><td>chrome</td><td>22时51分58秒</td><td>失败</td><td>执行command: open_browser('chrome') 命令的时候，出现异常，异常信息：[WinError 6] 句柄无效。 
+ Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\main.py", line 104, in execute_command_keyword_by_sheet_name
+    driver = eval(command)
+  File "<string>", line 1, in <module>
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 14, in open_browser
+    driver = webdriver.Chrome("e:\\chromedriver.exe")
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 73, in __init__
+    self.service.start()
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\common\service.py", line 76, in start
+    stdin=PIPE)
+  File "D:\ProgramFiles\Python36\lib\subprocess.py", line 596, in __init__
+    _cleanup()
+  File "D:\ProgramFiles\Python36\lib\subprocess.py", line 205, in _cleanup
+    res = inst._internal_poll(_deadstate=sys.maxsize)
+  File "D:\ProgramFiles\Python36\lib\subprocess.py", line 1035, in _internal_poll
+    if _WaitForSingleObject(self._handle, 0) == _WAIT_OBJECT_0:
+OSError: [WinError 6] 句柄无效。
+</td><td></td></tr>
+<tr><td>2</td><td>访问126邮箱首页</td><td>get</td><td></td><td></td><td>https://mail.126.com</td><td>22时51分58秒</td><td>失败</td><td>执行command: get('https://mail.126.com') 命令的时候，出现异常，异常信息：浏览器访问 url：https://mail.126.com 出现异常，异常信息：Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 723, in urlopen
+    chunked=chunked,
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 964, in send
+    self.connect()
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000014964BD4588>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 29, in get
+    driver.get(url)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 333, in get
+    self.execute(Command.GET, {'url': url})
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 376, in execute
+    return self._request(command_info[0], url, body=data)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 399, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\request.py", line 82, in request
+    method, url, fields=fields, headers=headers, **urlopen_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 803, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=59156): Max retries exceeded with url: /session/75a24b24197e7342aa1ca93a95935813/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000014964BD4588>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',))
+ 
+ Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 723, in urlopen
+    chunked=chunked,
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 964, in send
+    self.connect()
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000014964BD4588>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 29, in get
+    driver.get(url)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 333, in get
+    self.execute(Command.GET, {'url': url})
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 376, in execute
+    return self._request(command_info[0], url, body=data)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 399, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\request.py", line 82, in request
+    method, url, fields=fields, headers=headers, **urlopen_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 803, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=59156): Max retries exceeded with url: /session/75a24b24197e7342aa1ca93a95935813/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000014964BD4588>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\main.py", line 111, in execute_command_keyword_by_sheet_name
+    eval(command)
+  File "<string>", line 1, in <module>
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 33, in get
+    raise Exception("浏览器访问 url：%s 出现异常，异常信息：%s" %(url,exception_info))
+Exception: 浏览器访问 url：https://mail.126.com 出现异常，异常信息：Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 723, in urlopen
+    chunked=chunked,
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 964, in send
+    self.connect()
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000014964BD4588>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 29, in get
+    driver.get(url)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 333, in get
+    self.execute(Command.GET, {'url': url})
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 376, in execute
+    return self._request(command_info[0], url, body=data)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 399, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\request.py", line 82, in request
+    method, url, fields=fields, headers=headers, **urlopen_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 803, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=59156): Max retries exceeded with url: /session/75a24b24197e7342aa1ca93a95935813/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000014964BD4588>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',))
+
+</td><td></td></tr>
+<tr><td>3</td><td>切入到iframe中</td><td>switch_to_iframe</td><td>126mail_index</td><td>login_iframe </td><td></td><td>22时52分6秒</td><td>失败</td><td>执行command: switch_to_iframe('xpath','//div[@id="loginDiv"]/iframe') 命令的时候，出现异常，异常信息：定位方式:xpath 定位表达式：//div[@id="loginDiv"]/iframe 的iframe在切换时候出现异常,异常信息：
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 723, in urlopen
+    chunked=chunked,
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 964, in send
+    self.connect()
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000014964C58B00>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 7, in get_element
+    driver.implicitly_wait(6)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 912, in implicitly_wait
+    'implicit': int(float(time_to_wait) * 1000)})
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 376, in execute
+    return self._request(command_info[0], url, body=data)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 399, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\request.py", line 82, in request
+    method, url, fields=fields, headers=headers, **urlopen_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 803, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=59156): Max retries exceeded with url: /session/75a24b24197e7342aa1ca93a95935813/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000014964C58B00>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 38, in switch_to_iframe
+    element = get_element(driver,locate_method,locate_exp)
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 30, in get_element
+    raise Exception("定位方法：%s  定位表达式:%s 进行定位时候出现异常" % (locate_method, locate_exp))
+Exception: 定位方法：xpath  定位表达式://div[@id="loginDiv"]/iframe 进行定位时候出现异常
+ 
+ Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 723, in urlopen
+    chunked=chunked,
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 964, in send
+    self.connect()
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000014964C58B00>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 7, in get_element
+    driver.implicitly_wait(6)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 912, in implicitly_wait
+    'implicit': int(float(time_to_wait) * 1000)})
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 376, in execute
+    return self._request(command_info[0], url, body=data)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 399, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\request.py", line 82, in request
+    method, url, fields=fields, headers=headers, **urlopen_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 803, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=59156): Max retries exceeded with url: /session/75a24b24197e7342aa1ca93a95935813/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000014964C58B00>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 38, in switch_to_iframe
+    element = get_element(driver,locate_method,locate_exp)
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 30, in get_element
+    raise Exception("定位方法：%s  定位表达式:%s 进行定位时候出现异常" % (locate_method, locate_exp))
+Exception: 定位方法：xpath  定位表达式://div[@id="loginDiv"]/iframe 进行定位时候出现异常
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\main.py", line 111, in execute_command_keyword_by_sheet_name
+    eval(command)
+  File "<string>", line 1, in <module>
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 46, in switch_to_iframe
+    raise Exception("定位方式:%s 定位表达式：%s 的iframe在切换时候出现异常,异常信息：\n" %(locate_method,locate_exp)+exception_info )
+Exception: 定位方式:xpath 定位表达式：//div[@id="loginDiv"]/iframe 的iframe在切换时候出现异常,异常信息：
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 723, in urlopen
+    chunked=chunked,
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 964, in send
+    self.connect()
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000014964C58B00>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 7, in get_element
+    driver.implicitly_wait(6)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 912, in implicitly_wait
+    'implicit': int(float(time_to_wait) * 1000)})
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 376, in execute
+    return self._request(command_info[0], url, body=data)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 399, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\request.py", line 82, in request
+    method, url, fields=fields, headers=headers, **urlopen_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 803, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=59156): Max retries exceeded with url: /session/75a24b24197e7342aa1ca93a95935813/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000014964C58B00>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 38, in switch_to_iframe
+    element = get_element(driver,locate_method,locate_exp)
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 30, in get_element
+    raise Exception("定位方法：%s  定位表达式:%s 进行定位时候出现异常" % (locate_method, locate_exp))
+Exception: 定位方法：xpath  定位表达式://div[@id="loginDiv"]/iframe 进行定位时候出现异常
+
+</td><td></td></tr>
+<tr><td>4</td><td>输入用户名testman1980</td><td>input</td><td>126mail_index</td><td>user_name</td><td>${用户名}</td><td>22时52分14秒</td><td>失败</td><td>执行command: input('xpath','//input[@name="email"]','testABC1001') 命令的时候，出现异常，异常信息：定位方式:xpath 定位表达式：//input[@name="email"] 的元素在输入内容 testABC1001 时候出现异常，异常信息：Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 723, in urlopen
+    chunked=chunked,
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 964, in send
+    self.connect()
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000014964C58FD0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 7, in get_element
+    driver.implicitly_wait(6)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 912, in implicitly_wait
+    'implicit': int(float(time_to_wait) * 1000)})
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 376, in execute
+    return self._request(command_info[0], url, body=data)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 399, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\request.py", line 82, in request
+    method, url, fields=fields, headers=headers, **urlopen_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 803, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=59156): Max retries exceeded with url: /session/75a24b24197e7342aa1ca93a95935813/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000014964C58FD0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 58, in input
+    element = get_element(driver,locate_method, locate_exp)
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 30, in get_element
+    raise Exception("定位方法：%s  定位表达式:%s 进行定位时候出现异常" % (locate_method, locate_exp))
+Exception: 定位方法：xpath  定位表达式://input[@name="email"] 进行定位时候出现异常
+ 
+ Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 723, in urlopen
+    chunked=chunked,
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 964, in send
+    self.connect()
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000014964C58FD0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 7, in get_element
+    driver.implicitly_wait(6)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 912, in implicitly_wait
+    'implicit': int(float(time_to_wait) * 1000)})
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 376, in execute
+    return self._request(command_info[0], url, body=data)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 399, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\request.py", line 82, in request
+    method, url, fields=fields, headers=headers, **urlopen_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 803, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=59156): Max retries exceeded with url: /session/75a24b24197e7342aa1ca93a95935813/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000014964C58FD0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 58, in input
+    element = get_element(driver,locate_method, locate_exp)
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 30, in get_element
+    raise Exception("定位方法：%s  定位表达式:%s 进行定位时候出现异常" % (locate_method, locate_exp))
+Exception: 定位方法：xpath  定位表达式://input[@name="email"] 进行定位时候出现异常
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\main.py", line 111, in execute_command_keyword_by_sheet_name
+    eval(command)
+  File "<string>", line 1, in <module>
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 66, in input
+    raise Exception("定位方式:%s 定位表达式：%s 的元素在输入内容 %s 时候出现异常，异常信息：%s" %(locate_method, locate_exp,content,exception_info))
+Exception: 定位方式:xpath 定位表达式：//input[@name="email"] 的元素在输入内容 testABC1001 时候出现异常，异常信息：Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 723, in urlopen
+    chunked=chunked,
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 964, in send
+    self.connect()
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000014964C58FD0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 7, in get_element
+    driver.implicitly_wait(6)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 912, in implicitly_wait
+    'implicit': int(float(time_to_wait) * 1000)})
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 376, in execute
+    return self._request(command_info[0], url, body=data)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 399, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\request.py", line 82, in request
+    method, url, fields=fields, headers=headers, **urlopen_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 803, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=59156): Max retries exceeded with url: /session/75a24b24197e7342aa1ca93a95935813/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000014964C58FD0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 58, in input
+    element = get_element(driver,locate_method, locate_exp)
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 30, in get_element
+    raise Exception("定位方法：%s  定位表达式:%s 进行定位时候出现异常" % (locate_method, locate_exp))
+Exception: 定位方法：xpath  定位表达式://input[@name="email"] 进行定位时候出现异常
+
+</td><td></td></tr>
+<tr><td>5</td><td>输入密码wulaoshi1978</td><td>input</td><td>126mail_index</td><td>pass_word</td><td>${密码}</td><td>22时52分22秒</td><td>失败</td><td>执行command: input('xpath','//input[@name="password"]','test@ABC') 命令的时候，出现异常，异常信息：定位方式:xpath 定位表达式：//input[@name="password"] 的元素在输入内容 test@ABC 时候出现异常，异常信息：Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 723, in urlopen
+    chunked=chunked,
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 964, in send
+    self.connect()
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000014964BD4748>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 7, in get_element
+    driver.implicitly_wait(6)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 912, in implicitly_wait
+    'implicit': int(float(time_to_wait) * 1000)})
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 376, in execute
+    return self._request(command_info[0], url, body=data)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 399, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\request.py", line 82, in request
+    method, url, fields=fields, headers=headers, **urlopen_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 803, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=59156): Max retries exceeded with url: /session/75a24b24197e7342aa1ca93a95935813/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000014964BD4748>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 58, in input
+    element = get_element(driver,locate_method, locate_exp)
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 30, in get_element
+    raise Exception("定位方法：%s  定位表达式:%s 进行定位时候出现异常" % (locate_method, locate_exp))
+Exception: 定位方法：xpath  定位表达式://input[@name="password"] 进行定位时候出现异常
+ 
+ Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 723, in urlopen
+    chunked=chunked,
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 964, in send
+    self.connect()
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000014964BD4748>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 7, in get_element
+    driver.implicitly_wait(6)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 912, in implicitly_wait
+    'implicit': int(float(time_to_wait) * 1000)})
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 376, in execute
+    return self._request(command_info[0], url, body=data)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 399, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\request.py", line 82, in request
+    method, url, fields=fields, headers=headers, **urlopen_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 803, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=59156): Max retries exceeded with url: /session/75a24b24197e7342aa1ca93a95935813/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000014964BD4748>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 58, in input
+    element = get_element(driver,locate_method, locate_exp)
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 30, in get_element
+    raise Exception("定位方法：%s  定位表达式:%s 进行定位时候出现异常" % (locate_method, locate_exp))
+Exception: 定位方法：xpath  定位表达式://input[@name="password"] 进行定位时候出现异常
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\main.py", line 111, in execute_command_keyword_by_sheet_name
+    eval(command)
+  File "<string>", line 1, in <module>
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 66, in input
+    raise Exception("定位方式:%s 定位表达式：%s 的元素在输入内容 %s 时候出现异常，异常信息：%s" %(locate_method, locate_exp,content,exception_info))
+Exception: 定位方式:xpath 定位表达式：//input[@name="password"] 的元素在输入内容 test@ABC 时候出现异常，异常信息：Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 723, in urlopen
+    chunked=chunked,
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 964, in send
+    self.connect()
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000014964BD4748>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 7, in get_element
+    driver.implicitly_wait(6)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 912, in implicitly_wait
+    'implicit': int(float(time_to_wait) * 1000)})
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 376, in execute
+    return self._request(command_info[0], url, body=data)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 399, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\request.py", line 82, in request
+    method, url, fields=fields, headers=headers, **urlopen_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 803, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=59156): Max retries exceeded with url: /session/75a24b24197e7342aa1ca93a95935813/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000014964BD4748>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 58, in input
+    element = get_element(driver,locate_method, locate_exp)
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 30, in get_element
+    raise Exception("定位方法：%s  定位表达式:%s 进行定位时候出现异常" % (locate_method, locate_exp))
+Exception: 定位方法：xpath  定位表达式://input[@name="password"] 进行定位时候出现异常
+
+</td><td></td></tr>
+<tr><td>6</td><td>点击登录按钮</td><td>click</td><td>126mail_index</td><td>submit_button</td><td></td><td>22时52分31秒</td><td>失败</td><td>执行command: click('id','dologin') 命令的时候，出现异常，异常信息：定位方式:id 定位表达式：dologin 的元素在点击操作时候出现异常，异常信息：Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 723, in urlopen
+    chunked=chunked,
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 964, in send
+    self.connect()
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000014964C8F6D8>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 10, in get_element
+    driver.implicitly_wait(6)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 912, in implicitly_wait
+    'implicit': int(float(time_to_wait) * 1000)})
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 376, in execute
+    return self._request(command_info[0], url, body=data)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 399, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\request.py", line 82, in request
+    method, url, fields=fields, headers=headers, **urlopen_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 803, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=59156): Max retries exceeded with url: /session/75a24b24197e7342aa1ca93a95935813/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000014964C8F6D8>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 71, in click
+    element = get_element(driver, locate_method, locate_exp)
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 30, in get_element
+    raise Exception("定位方法：%s  定位表达式:%s 进行定位时候出现异常" % (locate_method, locate_exp))
+Exception: 定位方法：id  定位表达式:dologin 进行定位时候出现异常
+ 
+ Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 723, in urlopen
+    chunked=chunked,
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 964, in send
+    self.connect()
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000014964C8F6D8>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 10, in get_element
+    driver.implicitly_wait(6)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 912, in implicitly_wait
+    'implicit': int(float(time_to_wait) * 1000)})
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 376, in execute
+    return self._request(command_info[0], url, body=data)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 399, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\request.py", line 82, in request
+    method, url, fields=fields, headers=headers, **urlopen_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 803, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=59156): Max retries exceeded with url: /session/75a24b24197e7342aa1ca93a95935813/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000014964C8F6D8>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 71, in click
+    element = get_element(driver, locate_method, locate_exp)
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 30, in get_element
+    raise Exception("定位方法：%s  定位表达式:%s 进行定位时候出现异常" % (locate_method, locate_exp))
+Exception: 定位方法：id  定位表达式:dologin 进行定位时候出现异常
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\main.py", line 111, in execute_command_keyword_by_sheet_name
+    eval(command)
+  File "<string>", line 1, in <module>
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 79, in click
+    raise Exception("定位方式:%s 定位表达式：%s 的元素在点击操作时候出现异常，异常信息：%s" % (locate_method, locate_exp,exception_info))
+Exception: 定位方式:id 定位表达式：dologin 的元素在点击操作时候出现异常，异常信息：Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 723, in urlopen
+    chunked=chunked,
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 964, in send
+    self.connect()
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000014964C8F6D8>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 10, in get_element
+    driver.implicitly_wait(6)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 912, in implicitly_wait
+    'implicit': int(float(time_to_wait) * 1000)})
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 376, in execute
+    return self._request(command_info[0], url, body=data)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 399, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\request.py", line 82, in request
+    method, url, fields=fields, headers=headers, **urlopen_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 803, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=59156): Max retries exceeded with url: /session/75a24b24197e7342aa1ca93a95935813/timeouts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000014964C8F6D8>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 71, in click
+    element = get_element(driver, locate_method, locate_exp)
+  File "D:\hybrid_test_driven_framework\util\page_element.py", line 30, in get_element
+    raise Exception("定位方法：%s  定位表达式:%s 进行定位时候出现异常" % (locate_method, locate_exp))
+Exception: 定位方法：id  定位表达式:dologin 进行定位时候出现异常
+
+</td><td></td></tr>
+<tr><td>7</td><td>等待4秒</td><td>sleep</td><td></td><td></td><td>10</td><td>22时52分39秒</td><td>成功</td><td></td><td></td></tr>
+<tr><td>8</td><td>断言通讯录是否出现在源码中</td><td>assert_word</td><td></td><td></td><td>通讯录</td><td>22时52分49秒</td><td>失败</td><td>执行command: assert_word('通讯录') 命令的时候，出现异常，异常信息：HTTPConnectionPool(host='127.0.0.1', port=59156): Max retries exceeded with url: /session/75a24b24197e7342aa1ca93a95935813/source (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000014964C8FB70>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',)) 
+ Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 723, in urlopen
+    chunked=chunked,
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "D:\ProgramFiles\Python36\lib\http\client.py", line 964, in send
+    self.connect()
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000014964C8FB70>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hybrid_test_driven_framework\main.py", line 111, in execute_command_keyword_by_sheet_name
+    eval(command)
+  File "<string>", line 1, in <module>
+  File "D:\hybrid_test_driven_framework\key_word\key_word.py", line 108, in assert_word
+    assert word in driver.page_source,"断言异常：断言词%s 没有在源码中被发现！" %word
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 679, in page_source
+    return self.execute(Command.GET_PAGE_SOURCE)['value']
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 376, in execute
+    return self._request(command_info[0], url, body=data)
+  File "D:\ProgramFiles\Python36\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 399, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\request.py", line 78, in request
+    method, url, fields=fields, headers=headers, **urlopen_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\request.py", line 99, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    **response_kw
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\connectionpool.py", line 803, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "D:\ProgramFiles\Python36\lib\site-packages\urllib3\util\retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=59156): Max retries exceeded with url: /session/75a24b24197e7342aa1ca93a95935813/source (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000014964C8FB70>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',))
+</td><td></td></tr>
+  
+    </tbody>  
+    </table>   
+    <br><br>  
+    
